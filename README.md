@@ -1,2 +1,2 @@
 # angular-utils
-angular utility snippets
+angular code snippets
