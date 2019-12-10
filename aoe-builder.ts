@@ -4,6 +4,7 @@ import { FormCacheService } from '@ui-form-services/form-cache/form-cache.servic
 import { BasicInfoMapper } from './basic-info.mapper';
 import { PersonalInfoMapper } from './personal-info.mapper';
 import { Injectable } from '@angular/core';
+import { BaseMapper } from './base.mapper';
 
 @Injectable({
     providedIn: 'root'

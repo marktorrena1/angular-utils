@@ -1,13 +1,12 @@
 import { ApplicationData } from '@api/bff/models';
+import { BaseMapper } from './base.mapper';
 
-export class PersonalInfoMapper implements BaseMapper {
-    private _appData: ApplicationData;
+export class PersonalInfoMapper extends BaseMapper {
     constructor(applicationData: ApplicationData) {
-        this._appData = applicationData;
+        super(applicationData);
     }
     mapObject(formGroup: any) {
         this._appData.planName = 'MARK JEO';
         return this._appData;
     }
-
 }

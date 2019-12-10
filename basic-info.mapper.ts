@@ -1,12 +1,12 @@
 import { ApplicationData } from '@api/bff/models';
-import { FormGroup } from '@angular/forms';
+import { BaseMapper } from './base.mapper';
 
-export class BasicInfoMapper implements BaseMapper {
-    private _appData: ApplicationData;
+export class BasicInfoMapper extends BaseMapper {
+
     constructor(applicationData: ApplicationData) {
-        this._appData = applicationData;
+        super(applicationData);
     }
-    mapObject(formGroup: FormGroup): ApplicationData {
+    mapObject(formGroup: any): ApplicationData {
         this._appData.planId = '123';
         return this._appData;
     }
