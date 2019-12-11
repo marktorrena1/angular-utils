@@ -15,10 +15,12 @@ export class BaseBuilder<T> {
 
     setData(rawData : T) {
         this.rawData = rawData;
+        return this;
     }
 
     setChecker(checker: ModuleChecker) {
         this.gChecker = checker;
+        return this;
     }
 
     mapObject(formGroupName: string) {
@@ -36,6 +38,7 @@ export class BaseBuilder<T> {
 
         // this.applicationData = this.mapper.mapObject(this.formCacheService.getFormGroup(formGroupName));
         this.rawData = this.mapper.mapObject({ });
+        return this;
     }
 
     getUpdatedAppData() {

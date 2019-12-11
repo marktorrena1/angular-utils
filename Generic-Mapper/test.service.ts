@@ -21,11 +21,12 @@ export class TestService {
         // console.log(this.aoeBuilder.getUpdatedAppData());
 
         // HR - AgentReport, HRChecker
-        this.bBuilder.setData(appData);
-        this.bBuilder.setChecker(new AgentOverViewChecker());
-        this.bBuilder.mapObject('BASIC-INFO');
-        this.bBuilder.mapObject('PERSONAL-INFO');
-        console.log(this.bBuilder.getUpdatedAppData());
+        const ret = this.bBuilder.setData(appData)
+                     .setChecker(new AgentOverViewChecker())
+                     .mapObject('BASIC-INFO')
+                     .mapObject('PERSONAL-INFO')
+                     .getUpdatedAppData();
+        console.log(ret);
 
     }
 
